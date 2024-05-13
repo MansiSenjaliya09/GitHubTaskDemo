@@ -20,7 +20,6 @@ import { subDays, format } from 'date-fns';
 import './css/card.css';
 import { NavLink } from 'react-router-dom';
 
-// ----------------------------------------------------------------------
 const TextField = styled(TextValidator)(() => ({
   width: '100%',
   marginBottom: '16px',
@@ -57,8 +56,7 @@ export default function DashboardAppPage() {
 
   useEffect(() => {
     fetchData();
-  }, []); // Fetch data on initial render
-
+  }, []); 
   const handleChange = (e) => {
     e.persist();
     setData({ ...data, [e.target.name]: e.target.value });
@@ -172,7 +170,6 @@ export default function DashboardAppPage() {
         )}
       </Container>
 
-      {/* ==============(Dialog)============================================ */}
 
       <Dialog
         open={open}

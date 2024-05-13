@@ -3,7 +3,7 @@ import { set, sub } from 'date-fns';
 import { noCase } from 'change-case';
 import { faker } from '@faker-js/faker';
 import { useState } from 'react';
-// @mui
+
 import {
   Box,
   List,
@@ -20,13 +20,9 @@ import {
   ListItemAvatar,
   ListItemButton,
 } from '@mui/material';
-// utils
 import { fToNow } from '../../../utils/formatTime';
-// components
 import Iconify from '../../../components/iconify';
 import Scrollbar from '../../../components/scrollbar';
-
-// ----------------------------------------------------------------------
 
 const NOTIFICATIONS = [
   {
@@ -181,7 +177,6 @@ export default function NotificationsPopover() {
   );
 }
 
-// ----------------------------------------------------------------------
 
 NotificationItem.propTypes = {
   notification: PropTypes.shape({
@@ -232,8 +227,6 @@ function NotificationItem({ notification }) {
     </ListItemButton>
   );
 }
-
-// ----------------------------------------------------------------------
 
 function renderContent(notification) {
   const title = (
